@@ -32,19 +32,18 @@ const XDictionaryApp = () => {
       <div>
         <input
           type="text"
-          placeholder="Enter a word"
+          placeholder="Search for a word..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button onClick={handleSearch}>Search</button>
       </div>
-      {searchTerm && (
-        <div>
-          <p>
-            Definition: <strong>{searchResult}</strong>
-          </p>
-        </div>
-      )}
+      <div>
+        <p>
+          <strong>Definition:</strong>
+          <p>{searchResult}</p>
+        </p>
+      </div>
     </div>
   );
 };
