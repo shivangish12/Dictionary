@@ -38,11 +38,13 @@ const XDictionaryApp = () => {
         />
         <button onClick={handleSearch}>Search</button>
       </div>
-      <div>
-        <p>
-          Definition: <strong>{searchResult}</strong>
-        </p>
-      </div>
+      {searchTerm && (
+        <div>
+          <p>
+            Definition: <strong>{searchResult}</strong>
+          </p>
+        </div>
+      )}
     </div>
   );
 };
